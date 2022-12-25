@@ -3,54 +3,38 @@
  *
  * @s: pointer to string
  *
- * Algo_1: reverse the string and store it right after it ends. then 
- * set the pointer s to point to the address of its last char
- * this way the pointer s now points to its reversed string. 
- * do not alter the value of s till the very end of the program.
- * use temp variables to store other addresses during the program
- * 
- * Fail_1: you can't change teh address that a char *  pointer points
- * to if that pointer was originally an array name. e.g. char str[] 
- * is also a char *str which points to the address of the first elt. 
- * in this case you can't then change the addresss taht str points to. 
- * you get a segmentation fault. at least that's' what i'm understanding
- * so far
+ * Algo: find length of string then initiate 2 variables, one set
+ * to start from 0 moving forward and the other from len - 1 moving backwards.
+ * then exchange chars on opposite ends of string. so for a str of 9 chars,
+ * 1st and 9th are exchanged, then 2nd and 8th, 3rd and 7th, 4th and 6th, 5th
+ * remains thus now if you print the string, its reversed
+ *
  */
 
 #include "main.h"
-#include <stdio.h>
-
-void main()
-{
-	char *str;
-
-	str = "Whatever";
-	printf("%s\n", str);
-	
-	rev_string(str);
-	printf("%s\n", str);
-}
 
 void rev_string(char *s)
 {
 	int len;
 	int i;
 	int j;
+	char tmp;
 
 	len = _strlen(s); /* get length of string */
-	
-	i = len; /* index right after last char (i.e. after null) */
-	j = len - 1; /* last char of teh str */
 
-	while (i < 2 * len)
+	i = 0;
+	j = len - 1; /* set j to last char of string */
+
+	/* exchanging chars at opposite ends of str */
+	while (i < len / 2)
 	{
-		s[i] = s[j]; /* storing the string in reverse */
-		i++; /* tracks reversed string */
-		j--; /* tracks original string */
+		tmp = s[i];
+		s[i] = s[j];
+		s[j] = tmp;
+
+		i++;
+		j--;
 	}
-	
-	/* setting s to point to address of first char of reversed string */
-	printf("%s\n", s);
 }
 
 
