@@ -1,0 +1,32 @@
+save source code with .c extension e.g. hello.c
+compile using gcc hello.c
+this will create an executable file with some name e.g. a.out
+or you can name the executable file while compiling by running
+gcc hello.c -o hello
+this way the executable file will be named hello
+another alternative (for linux os and the like, probably won't work for windows) is 
+make hello
+the terminal will then look for a source code file with a similar name and 
+compile it into an executable file named hello
+
+char are enclosed in ' '
+str in " "
+
+what a compiler does: preprocessing --> compiling --> assembling --> linking
+
+preprocessing: 
+**removes comments from source code
+**it grabs the required header files and 'opens' them into the source code
+**replaces any macro names with their values/codes
+
+compiling: takes the result of preprocessing and generates an assembly code out of it
+**the assembly code is still not understandable by the machine so it has to be processed to binary code
+
+assembling: process the assembly code into binary code also known as object code
+
+linking: there's static linking and dynamic linking
+this combines different object files generated from different modules into a single executable code
+you'd have different modules if for example you were working on a single project as a team so you 
+generate >1 source codes therefore having >1 object/binary codes but you only need 1 executable file 
+at the end. that's one of the jobs a linker does. 
+i need to read more on this linking part.

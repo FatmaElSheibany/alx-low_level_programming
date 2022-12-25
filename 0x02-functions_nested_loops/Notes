@@ -1,0 +1,12 @@
+1 -- in every file, make sure you have a declaration for every function you'll be using. 
+	{you do this either by a direct declaration of the function or include a header that contains the declaration.
+	For example, you're using the function _putchar in some source code, then at the top, BEFORE the main function, include the declaration int _putchar(char) or include the header file main.h which contains this declaration
+	}
+
+2 -- in addition to the declaration, when compiling a source code, the linker should be able to find the body of all functions used in the source code. 
+	{this can be achieved by either defining the body of the function inside the code itself, so maybe after concluding the main function, you could have the body of a function you called inside the main function. Or when compiling, you pass along the file containing the function body alongside the source code file. 
+
+	So say I'm compiling a source code file main.c in which I'm calling the function _islower(). I've already included the header main.h inside main.c and the main.h contains a declaration of _islower(). So when compiling, I'll still get an error undefined reference to _islower, because the linker can not find the body of the function, how does it know what it does?? So the solution is that when compiling, I run gcc main.c _islower.c, where main.c is teh source code calling the function _islower(), and _islower.c is the file containing the body of the function _islower(). Note that you don't have to include main.h as an argument in the gcc command, coz the preprocessor will include the header file when the gcc command is run.
+	}
+
+3 -- when referencing INT_MIN or INT_MAX, you need to include the limits.h library else compilation errors will ensue

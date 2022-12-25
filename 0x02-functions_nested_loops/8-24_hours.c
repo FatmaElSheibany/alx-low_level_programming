@@ -1,0 +1,25 @@
+/**
+ * jack_bauer - prints every minute starting from 00:00 to 23:59
+ */
+
+#include "main.h"
+
+void jack_bauer(void)
+{
+	int t1;
+	int t2;
+
+	for (t1 = 0; t1 <= 23; t1++)
+	{
+		for (t2 = 0; t2 <= 59; t2++)
+		{
+			_putchar(t1 / 10 + '0');
+			_putchar(t1 % 10 + '0');
+			_putchar(':');
+			_putchar(t2 / 10 + '0');
+			_putchar(t2 % 10 + '0');
+			_putchar('\n');
+		}
+	}
+}
+
