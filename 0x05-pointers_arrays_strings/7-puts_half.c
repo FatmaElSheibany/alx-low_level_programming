@@ -23,7 +23,6 @@ void puts_half(char *str)
 		len++; /* get length of str via counting non-\0 chars */
 		cpystr++;
 	}
-	_putchar('\n');
 
 	/* if len is odd, print second half of str, skip middle char */
 	if (len % 2 == 0)
