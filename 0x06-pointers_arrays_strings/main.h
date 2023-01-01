@@ -7,6 +7,6 @@
 char *_strcat(char *dest, char *src);
 
 /* concatenates max of n bytes of src onto dest */
-char *strncat(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n);
 
 
