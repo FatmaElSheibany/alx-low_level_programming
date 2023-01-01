@@ -10,28 +10,14 @@
 
 void print_array(int *a, int n)
 {
-	int i; 
-	long int len;
-	
-	printf("sizeof (a) = %ld -- sizeof(a[4]) = %ld\n", sizeof(a), sizeof(a[4]));
+	int i;
 
-	len = sizeof(a) / sizeof(a[0]); /* get size of array */
-	
-	printf("len = %ld\n", len);
-
-	if (n >= len)
-		n = len;
-	else if (len == 0)
-		return; 
-
-	i = 0; 
+	i = 0;
 	while (i < n - 1)
 	{
-		printf("i = %d\n", i);
-		printf("%dth element = %d\n", i, a[i]);
+		printf("%d, ", a[i]);
 		i++;
-		printf("now i = %d\n-----\n", i);
 	}
-	printf("last element to be printed = %d\n", a[i]);
+	printf("%d\n", a[i]);
 }
 
