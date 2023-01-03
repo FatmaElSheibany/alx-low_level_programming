@@ -28,6 +28,9 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
+	if (c == '\0')
+		found = 1;
+
 	if (found == 0)
 		return (NULL);
 	else
