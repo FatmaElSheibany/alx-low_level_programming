@@ -10,4 +10,7 @@ char *_memset(char *s, char b, unsigned int n);
 /* copy n bytes from one memory area to another */
 char *_memcpy(char *dest, char *src, unsigned int n);
 
+/* looks for a char in a string s */
+char *_strchr(char *s, char c);
+
 
