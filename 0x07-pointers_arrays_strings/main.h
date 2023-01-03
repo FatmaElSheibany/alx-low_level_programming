@@ -13,4 +13,9 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 /* looks for a char in a string s */
 char *_strchr(char *s, char c);
 
+/* gets length of a prefix substring i.e. substring containing only chars
+ * from a certain string 
+ */
+unsigned int _strspn(char *s, char *accept);
+
 
