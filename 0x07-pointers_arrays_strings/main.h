@@ -18,4 +18,7 @@ char *_strchr(char *s, char c);
  */
 unsigned int _strspn(char *s, char *accept);
 
+/* locates first occurrence of any of a set of bytes in a string */
+char *_strpbrk(char *s, char *accept);
+
 
