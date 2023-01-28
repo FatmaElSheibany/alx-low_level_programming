@@ -22,24 +22,17 @@ char *str_concat(char *s1, char *s2)
 	/* get size fo each string */
 
 	size1 = 0;
-
 	if (s1 != NULL)
-	{
 		while (*(s1 + size1) != '\0')
 			size1++;
-	}
-	
-	size2 = 0;
 
+	size2 = 0;
 	if (s2 != NULL)
-	{
 		while (*(s2 + size2) != '\0')
 			size2++;
-	}
 
 	/* required bytes for concatenated string str = size1 + size2 + 1 */
 	/* 1 is for the null terminator */
-
 	str = malloc((size1 + size2 + 1) * sizeof(*s1));
 
 	if (str == NULL)
