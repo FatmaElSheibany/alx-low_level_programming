@@ -15,4 +15,10 @@ char *_strdup(char *str);
 /* concatenates two strings */
 char *str_concat(char *s1, char *s2);
 
+/* returns a pointer to a 2D array of int */
+int **alloc_grid(int width, int height);
+
+/* frees the memory allocated for a 2D grid */
+void free_grid(int **grid, int height);
+
 
